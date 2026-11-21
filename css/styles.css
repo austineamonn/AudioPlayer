@@ -1,0 +1,79 @@
+/* Body */
+body {
+    background: rgb(1, 8, 33);
+    color: #f0f0f0;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #3730ff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+#song-search {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}
+
+/* Music Player */
+.player-container {
+    background-color: #a09fae;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: calc(100vw - 200px);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.playlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.playlist-item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.playlist-item:hover {
+    background-color: #080437;
+}
+
+.active {
+    background-color: #131047;
+}
+
+#albumCover {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* Options: contain, fill, cover, scale-down */
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+}

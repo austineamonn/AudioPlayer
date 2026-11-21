@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player with Playlist</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="sidebar">
+            <search>
+                <!-- Search Bar -->
+                <form id="song-search" action="./search/">
+                    <label for="song">Find a Song</label>
+                    <input type="search" id="song" name="q" onkeyup="searchFunction()"/>
+                </form>
+            </search>
+        </div>
+        <div class="player-container">
+            <img id="albumCover" srcset="" alt="Album Cover" width="600" height="600">
+            <audio id="audioPlayer" controls>
+                Your browser does not support the audio element.
+            </audio>
+            <ul id="playlist" class="playlist">
+                <!-- Playlist items will be dynamically added here -->
+            </ul>
+            <input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
+            <ul id="listing"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
