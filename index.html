@@ -17,17 +17,21 @@
                     <input type="search" id="song" name="q" onkeyup="searchFunction()"/>
                 </form>
             </search>
+            <input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
         </div>
         <div class="player-container">
             <img id="albumCover" srcset="" alt="Album Cover" width="600" height="600">
             <audio id="audioPlayer" controls>
                 Your browser does not support the audio element.
             </audio>
+            <div id="title-card">
+                <h1 id="songTitle">Title</h1>
+                <h3 id="songAlbum">Album</h3>
+                <p id="songArtist">Artist</p>
+            </div>
             <ul id="playlist" class="playlist">
                 <!-- Playlist items will be dynamically added here -->
             </ul>
-            <input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
-            <ul id="listing"></ul>
         </div>
     </div>
     <script src="script.js"></script>

@@ -9,10 +9,13 @@ const songs = [];
 // example entry: { album: 'Wishbone', artist: 'Conan Gray', title: 'Actor', url: 'music/ConanGray- Wishbone(2025)/Actor.mp3', img: 'music/ConanGray-Wishbone(2025)/cover.jpg' }
 
 
-// Get references to the album cover, audio player, and playlist
+// Get references to various constants
 const albumCover = document.getElementById('albumCover');
 const audioPlayer = document.getElementById('audioPlayer');
 const playlist = document.getElementById('playlist');
+const songTitle = document.getElementById('songTitle');
+const songAlbum = document.getElementById('songAlbum');
+const songArtist = document.getElementById('songArtist');
 
 // Function to choose files and create playlist
 function chooseFiles() {
@@ -45,15 +48,21 @@ function chooseFiles() {
                 });
             }
         }
+        console.log(songs);
     });
 }
 
 // Function to handle song selection
 function selectSong(index) {
     const song = songs[index];
+    // add song details and image
     albumCover.src = song.img;
+    document.getElementById('songTitle').innerHTML = song.title;
+    document.getElementById('songAlbum').innerHTML = song.album;
+    document.getElementById('songArtist').innerHTML = song.artist;
     audioPlayer.src = song.url;
     audioPlayer.play();
+    console.log(song.title);
 
     // Update the active class on playlist items
     document.querySelectorAll('.playlist-item').forEach((item) => {
