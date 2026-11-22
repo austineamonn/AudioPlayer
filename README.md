@@ -12,11 +12,11 @@ Upload songs and play them.
 
 ## Latest Update:
 
-Added Title, Album, and Artist to the top of page near album image. moved choose file button to the side.
+Changed css so that layout adjusts based on screen width. Moved playlist to the left bar. Left bar scrolls separately from the main section.
 
 ## Known Bugs:
 
 <ul>
 <li>must open from music folder opening from lower folders causes issues.</li>
-<li>bad idea right does not work.</li>
+<li>bad idea right does not work. maybe its the question mark in the title?</li>
 </ul>

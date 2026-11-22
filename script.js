@@ -22,7 +22,7 @@ function chooseFiles() {
     document.getElementById("file-picker").addEventListener("change", (event) => {
         let index = 0
         for (const file of event.target.files) {
-            if (file.type === 'audio/mpeg') {
+            if (file.type === 'audio/mpeg') { // currently must be an mp3
                 jsmediatags.read(file, {
                     onSuccess: function(tag) {
                         const tags = tag.tags;
