@@ -12,7 +12,7 @@ Upload songs and play them.
 
 ## Latest Update:
 
-Changed css so that layout adjusts based on screen width. Moved playlist to the left bar. Left bar scrolls separately from the main section.
+removed some unnecessary files.
 
 ## Known Bugs:
 
